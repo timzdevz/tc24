@@ -8,7 +8,7 @@ class Twilio_API
 	const TWILIO_VERIFICATION_CHECK = 'https://api.authy.com/protected/json/phones/verification/check';
 	const TWILIO_TEST_API_KEY = 'bYUtJ86gjz9aZcDDXOquAHHf9us7zCZn';
 
-	static $supported_country_code = 7;
+	static $supported_country_code = 1;
 
 	static function send_code($phone_number) {
 		$curl = curl_init();

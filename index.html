@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>TrueCare 24</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="dist/vendor.css">
+    <link rel="stylesheet" href="dist/style.css">
+</head>
+<body>
+    <div id="wrapper">
+        <header>
+            <img src="images/TrueCare24_logo-1.png">
+                <div>
+                    <menu>
+                    <li class="active"><span class="mobile-hide">Step</span> 1</li>
+                    <li><span class="mobile-hide">Step</span> 2</li>
+                    <li><span class="mobile-hide">Step</span> 3</li>
+                    <li><span class="mobile-hide">Step</span> 4</li>
+                </menu>
+                </div>
+        </header>
+        <main>
+            <h2 class="title">Please complete the form to join the TrueCare24 network</h2>
+
+            <form class="container-fluid" id="form" method="post">
+
+                <div class="row form-group" id="tc-dropdown-selector">
+                    <div class="col-xs-12">
+                    <label for="role" class="label">Who are you?</label>
+                    <select name="role" id="role">
+                        <option>Caregiver</option>
+                        <option>Doctor</option>
+                        <option>Nurse</option>
+                        <option>Podiatrist</option>
+                        <option>Therapist Phlebotomist</option>
+                        <option>Other</option>
+                    </select>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-sm-6">
+                        <label for="fname" class="label">First name</label>
+                        <input type="text" placeholder="Type Here" class="input" name="fname" id="fname" required>
+                    </div>
+                    <div class="col-sm-6">
+                        <label for="lname" class="label">Last name</label>
+                        <input type="text" placeholder="Type Here" class="input" name="lname" id="lname" required>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-xs-12">
+                        <label for="zip" class="label">Zip code where you live</label>
+                        <div class="zip-container">
+                            <input type="text" pattern="^[0-9]+$" placeholder="Type Here" class="input" name="zip" id="zip" required>
+                            <span class="city-container">LA</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-xs-12">
+                        <label for="email" class="label">Email</label>
+                        <input type="email" placeholder="Type Here" class="input" id="email" required>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-xs-12">
+                        <label for="cellphone" class="label">Cell phone</label>
+                        <input type="tel" placeholder="Type Here" class="input" name="cellphone" id="cellphone" required>
+                    </div>
+                </div>
+
+                <div class="row form-group checkbox-control">
+                    <div class="col-xs-12">
+                        <label class="checkbox-container">
+                            <input type="checkbox" name="confirm" id="confirm" required>
+                            <span></span>
+                        </label>
+
+                        <label for="confirm" class="label">I confirm that I am duly licensed (as applicable) and have the qualifications, the experience and the ability to properly perform the Services.</label>
+                    </div>
+                </div>
+
+                <div class="row form-group">
+                    <div class="col-xs-12">
+                        <input type="submit" value="Submit" class="submit-btn">
+                    </div>
+                </div>
+
+            </form>
+        </main>
+    </div>
+    <div class="bg-wrapper"></div>
+    <form class="text-verification-form" id="verification-popup">
+        <div class="form-inner-wrapper">
+
+            <div class="text-verification-step-one">
+                <h2 class="title">Verification code</h2>
+
+                <div class="form-content">
+                    <p>A verification code has been<br> sent to <span class="number-sent"></span></p>
+                    <input type="text" class="input" placeholder="Type here" name="verification_code" id="verification_code" required>
+                    <div class="resend-code">Resend the code</div>
+                    <input type="submit" class="submit-btn" value="Confirm">
+                </div>
+            </div>
+
+            <div class="text-verification-step-two" style="display: none">
+                <h2 class="title">Congratulations, your phone is verified</h2>
+                <input type="submit" class="submit-btn" value="Continue" id="continue-btn">
+            </div>
+
+            <span class="close-form"></span>
+        </div>
+    </form>
+
+    <script src="dist/vendor.js"></script>
+    <script src="dist/scripts.js"></script>
+</body>
+</html>

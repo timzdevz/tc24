@@ -1,0 +1,510 @@
+/*
+html5doctor.com Reset Stylesheet
+v1.6.1
+Last Updated: 2010-09-17
+Author: Richard Clark - http://richclarkdesign.com
+Twitter: @rich_clark
+*/
+
+html, body, div, span, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+abbr, address, cite, code,
+del, dfn, em, img, ins, kbd, q, samp,
+small, strong, sub, sup, var,
+b, i,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section, summary,
+time, mark, audio, video {
+    margin:0;
+    padding:0;
+    border:0;
+    outline:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+body {
+    line-height:1;
+}
+
+article,aside,details,figcaption,figure,
+footer,header,hgroup,menu,nav,section {
+    display:block;
+}
+
+nav ul {
+    list-style:none;
+}
+
+blockquote, q {
+    quotes:none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content:'';
+    content:none;
+}
+
+a {
+    margin:0;
+    padding:0;
+    font-size:100%;
+    vertical-align:baseline;
+    background:transparent;
+}
+
+/* change colours to suit your needs */
+ins {
+    background-color:#ff9;
+    color:#000;
+    text-decoration:none;
+}
+
+/* change colours to suit your needs */
+mark {
+    background-color:#ff9;
+    color:#000;
+    font-style:italic;
+    font-weight:bold;
+}
+
+del {
+    text-decoration: line-through;
+}
+
+abbr[title], dfn[title] {
+    border-bottom:1px dotted;
+    cursor:help;
+}
+
+table {
+    border-collapse:collapse;
+    border-spacing:0;
+}
+
+/* change border colour to suit your needs */
+hr {
+    display:block;
+    height:1px;
+    border:0;
+    border-top:1px solid #cccccc;
+    margin:1em 0;
+    padding:0;
+}
+
+input, select {
+    vertical-align:middle;
+}
+
+
+/* styles start here */
+body {
+    background: #426173 url(../images/Pattern.png) repeat;
+    font-family: Lato, sans-serif;
+    color: #354650;
+}
+
+#wrapper {
+    max-width: 600px;
+    min-width: 320px;
+    margin: 0 auto 25px ;
+}
+
+header {
+    text-align: center;
+    padding: 20px 0;
+}
+
+header img {
+    padding-bottom: 20px;
+}
+
+menu {
+    display: inline-block;
+}
+
+menu:after {
+    display: block;
+    content: '';
+    clear: both;
+}
+
+menu li {
+    background: url("../images/Step 3.png") no-repeat;
+    display: block;
+    float: left;
+    width: 150px;
+    height: 50px;
+    box-sizing: border-box;
+    line-height: 50px;
+    color: #96A2A9;
+    position: relative;
+    cursor: pointer;
+}
+
+
+menu li.active {
+    background: url("../images/Step 1.png") no-repeat;
+    color: #fff;
+}
+
+menu li:nth-child(2) {
+    left: -5px;
+}
+
+menu li:nth-child(3) {
+    left: -10px;
+}
+
+menu li:nth-child(4) {
+    left: -15px;
+}
+
+
+main {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 30px;
+}
+
+.title {
+    font-size: 36px;
+    line-height: 1.2;
+    color: #354650;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.label {
+    margin-bottom: 10px;
+    display: block;
+    cursor: pointer;
+}
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.checkbox-control label {
+    line-height: 22px;
+}
+
+.checkbox-container {
+    display: block;
+    float: left;
+}
+
+.checkbox-container input {
+    position: absolute;
+    z-index: -9999;
+}
+
+.checkbox-container span {
+    width: 28px;
+    height: 28px;
+    display: block;
+    background: url("../images/Chekbox 0.png") no-repeat;
+    cursor: pointer;
+}
+
+.checkbox-container span,
+.checkbox-container + label {
+    -webkit-touch-callout: none; /* iOS Safari */
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* Internet Explorer/Edge */
+    user-select: none; /* Non-prefixed version, currently supported by Chrome and Opera */
+}
+
+.checkbox-container input:checked + span {
+    background: url("../images/Chekbox V.png") no-repeat;
+}
+
+.checkbox-control .label {
+    margin-left: 45px;
+}
+
+#form select {
+    width: 100%;
+}
+
+.zip-container {
+    position: relative;
+}
+
+.city-container {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #96A2A9;
+    font-size: 14px;
+}
+
+.validated input:valid {
+    border: 1px solid #54D0FF;
+}
+
+.validated input:invalid {
+    border: 1px solid #FF2F4F;
+}
+
+
+/* stylize select dropdown */
+
+#select2-role-container {
+    line-height: 60px;
+}
+
+span.select2.select2-container.select2-container--default {
+    width: 100% !important;
+}
+
+#tc-dropdown-selector .select2-container--default .select2-selection--single {
+    background: #F2F6FB;
+    border: 1px solid #C6D0D8;
+    border-radius: 6px;
+    height: 60px;
+}
+
+#tc-dropdown-selector .select2-container--default .select2-selection--single .select2-selection__arrow {
+    height: 58px;
+}
+
+#tc-dropdown-selector .select2-container .select2-selection--single .select2-selection__rendered {
+    padding-left: 20px;
+}
+
+.select2-container--default .select2-results__option--highlighted[aria-selected],
+.select2-container--default .select2-results__option[aria-selected=true] {
+    background-color: #F2F6FB !important;
+    color: inherit !important;
+}
+
+.select2-dropdown {
+    border: 0 !important;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+}
+
+.select2-results__option {
+    padding: 10px 20px !important;
+}
+
+.select2-container--default .select2-results>.select2-results__options {
+    max-height: none !important
+}
+
+.select2-container--open .select2-dropdown--below {
+    transform: translateY(-60%) !important;
+}
+.select2-container--open .select2-dropdown--above {
+    transform: translateY(60%) !important;
+}
+
+#wrapper .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    border: none;
+    width: 13px;
+    height: 8px;
+    background-image: url(../images/Arrow.png);
+    margin-left: -25px;
+    margin-top: -4px;
+}
+
+.input {
+    margin:0;
+    padding: 18px;
+    display:inline-block;
+    vertical-align:middle;
+    white-space:normal;
+    line-height:1;
+    width: 100%;
+    border: 1px solid #C6D0D8;
+    border-radius: 6px;
+    background-color: #F2F6FB;
+    font-size: 18px;
+}
+
+.input:focus {
+    outline: none;
+}
+
+.submit-btn {
+    padding: 20px;
+    background-color: #54D1FF;
+    color: #fff;
+    border: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border-radius: 6px;
+    font-size: 24px;
+}
+
+.submit-btn:hover {
+    background-color: #14C0FF;
+}
+
+/* text verification code form */
+
+.bg-wrapper {
+    background-color: #003346;
+    opacity: 0.7;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: none;
+}
+
+.text-verification-form {
+    width: 100%;
+    max-width: 400px;
+    min-width: 320px;
+    background-color: #fff;
+    border-radius: 10px;
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    display: none;
+}
+
+.text-verification-form .form-inner-wrapper {
+    padding: 35px 40px;
+    position: relative;
+}
+
+.text-verification-form .form-content {
+    padding: 0 40px;
+}
+
+.text-verification-form .title {
+    margin-bottom: 15px;
+}
+
+.text-verification-form p {
+    font-size: 18px;
+    line-height: 24px;
+    margin-bottom: 25px;
+}
+
+.text-verification-form .number-sent {
+    color: #54D0FF;
+}
+
+.text-verification-form .resend-code {
+    color: #54D0FF;
+    background: url("../images/Resend icon.png") no-repeat center left;
+    padding: 4px 0 4px 30px;
+    display: inline-block;
+    font-weight: bold;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.text-verification-form .resend-code.in-progress {
+    opacity: 0.3;
+    cursor: default;
+}
+
+.text-verification-form .input {
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.text-verification-form .close-form {
+    position: absolute;
+    right: -20px;
+    top: -20px;
+    background-image: url("../images/Close popup.png");
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+}
+
+.text-verification-form .text-verification-step-two {
+    background: url("../images/Thankyou_ico.png") top center no-repeat;
+    padding-top: 90px;
+}
+
+input.submit-btn[disabled] {
+    opacity: 0.3;
+}
+
+/* adaptive design */
+@media screen and (max-width: 767px) {
+
+
+    main {
+        padding: 27px 15px;
+    }
+
+    main .title {
+        font-size: 24px;
+        line-height: 29px;
+    }
+
+    #fname {
+        margin-bottom: 20px;
+    }
+
+    menu {
+        position: relative;
+        left: 0px;
+    }
+
+    menu li:nth-child(2) {
+        left: -1px;
+    }
+
+    menu li:nth-child(3) {
+        left: -2px;
+    }
+
+    menu li:nth-child(4) {
+        left: -3px;
+    }
+
+
+}
+@media screen and (max-width: 599px) {
+
+    menu li {
+        background: url("../images/Step_2.png") no-repeat;
+        width: 80px;
+        height: 30px;
+        line-height: 30px;
+    }
+
+    menu li.active {
+        background: url("../images/Step_1.png") no-repeat;
+    }
+
+    menu li .mobile-hide {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 450px) {
+    .text-verification-form .close-form {
+        right: 8px;
+        top: -28px;
+    }
+
+    .text-verification-form .form-inner-wrapper {
+        padding: 35px 0 55px;
+    }
+
+    .text-verification-form .text-verification-step-two {
+        padding-left: 30px;
+        padding-right: 30px;
+    }
+}

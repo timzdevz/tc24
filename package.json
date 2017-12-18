@@ -1,0 +1,13 @@
+{
+  "name": "truecare24",
+  "version": "1.0.0",
+  "description": "trucare24 demo app",
+  "author": "Tim Viktorov",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean": "^0.3.2",
+    "gulp-concat": "^2.6.1",
+    "gulp-minify": "^2.1.0",
+    "gulp-minify-css": "^1.2.4"
+  }
+}

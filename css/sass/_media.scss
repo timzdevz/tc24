@@ -1,0 +1,71 @@
+
+/* adaptive design */
+@media screen and (max-width: 767px) {
+
+
+  main {
+    padding: 27px 15px;
+  }
+
+  main .title {
+    font-size: 24px;
+    line-height: 29px;
+  }
+
+  #fname {
+    margin-bottom: 20px;
+  }
+
+  menu {
+    position: relative;
+    left: 0px;
+  }
+
+  menu li:nth-child(2) {
+    left: -1px;
+  }
+
+  menu li:nth-child(3) {
+    left: -2px;
+  }
+
+  menu li:nth-child(4) {
+    left: -3px;
+  }
+
+
+}
+@media screen and (max-width: 599px) {
+
+  menu li {
+    background: url("../images/Step_2.png") no-repeat;
+    width: 80px;
+    height: 30px;
+    line-height: 30px;
+  }
+
+  menu li.active {
+    background: url("../images/Step_1.png") no-repeat;
+  }
+
+  menu li .mobile-hide {
+    display: none;
+  }
+
+}
+
+@media screen and (max-width: 450px) {
+  .text-verification-form .close-form {
+    right: 8px;
+    top: -28px;
+  }
+
+  .text-verification-form .form-inner-wrapper {
+    padding: 35px 0 55px;
+  }
+
+  .text-verification-form .text-verification-step-two {
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+}

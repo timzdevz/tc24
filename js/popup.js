@@ -11,13 +11,13 @@ window.Popup = {
         this.popupBg.fadeIn('slow');
     },
     close: function() {
-        if (isClosing) {
+        if (window.isClosing || ! this.currentPopup) {
             return;
         }
-        var isClosing = true;
+        window.isClosing = true;
         this.currentPopup.fadeOut('slow');
         this.popupBg.fadeOut('slow', function() {
-            isClosing = false;
+            window.isClosing = false;
         });
         this.currentPopup = null;
 

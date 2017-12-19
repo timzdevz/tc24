@@ -3,7 +3,8 @@ var minify = require('gulp-minify'),
     gulp = require('gulp'),
     concat = require('gulp-concat'),
     clean = require('gulp-clean'),
-    minifyCSS = require('gulp-minify-css');
+    minifyCSS = require('gulp-minify-css'),
+    sass = require('gulp-sass');
 
 gulp.task('scripts', function() {
     gulp.src('js/*.js')
@@ -18,7 +19,7 @@ gulp.task('scripts', function() {
         }))
         .pipe(gulp.dest('dist'));
 
-    return gulp.src('vendor/*.js')
+    return gulp.src('js/vendor/*.js')
         .pipe(concat('vendor.js'))
         .pipe(minify({
             ext:{
@@ -32,19 +33,19 @@ gulp.task('scripts', function() {
 });
 
 gulp.task('styles', function() {
-    gulp.src(['css/*.css'])
-        .pipe(concat('style.css'))
-        .pipe(minifyCSS({
-            keepBreaks: true
-        }))
-        .pipe(gulp.dest('dist'));
+    gulp.src(['css/sass/*.scss'])
+        .pipe(sass({outputStyle: 'compressed'}).on('error', sass.logError))
+        .pipe(gulp.dest('./dist'));
+
 
     gulp.src(['css/vendor/*.css'])
         .pipe(concat('vendor.css'))
-        .pipe(minifyCSS({
-            keepBreaks: true
-        }))
+        .pipe(minifyCSS())
         .pipe(gulp.dest('dist'));
+});
+
+gulp.task('styles:watch', function () {
+    gulp.watch('css/sass/**/*.scss', ['styles']);
 });
 
 gulp.task('clean', function () {

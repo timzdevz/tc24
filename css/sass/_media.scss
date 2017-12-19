@@ -69,3 +69,59 @@
     padding-right: 30px;
   }
 }
+
+/* CSS for high-resolution devices */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+  only screen and (-moz-min-device-pixel-ratio: 1.5),
+  only screen and (-o-min-device-pixel-ratio: 3/2),
+  only screen and (min-device-pixel-ratio: 1.5) {
+
+  .logo {
+    background-image: url("../images/TrueCare24_logo@2x.svg");
+  }
+  .checkbox-container span {
+    background-image: url("../images/Chekbox 0@2x.svg");
+  }
+  .checkbox-container input:checked + span {
+    background-image: url("../images/Chekbox V@2x.svg");
+  }
+
+  #wrapper .select2-container--default .select2-selection--single .select2-selection__arrow b {
+    background-image: url("../images/Arrow@2x.svg");
+  }
+
+  .text-verification-form {
+    .resend-code {
+      background-image: url("../images/Resend icon@2x.svg");
+    }
+
+    .text-verification-step-two {
+      background-image: url("../images/Thankyou_ico@2x.svg")
+    }
+
+    .close-form {
+      background-image: url("../images/Close popup@2x.svg");
+    }
+  }
+
+  menu li {
+    background: url("../images/Step 2@2x.svg") no-repeat;
+  }
+
+  menu li.active {
+    background: url("../images/Step 1@2x.svg") no-repeat;
+  }
+}
+
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5) and (max-width: 599px),
+only screen and (-moz-min-device-pixel-ratio: 1.5) and (max-width: 599px),
+only screen and (-o-min-device-pixel-ratio: 3/2) and (max-width: 599px),
+only screen and (min-device-pixel-ratio: 1.5) and (max-width: 599px) {
+  menu li {
+    background: url("../images/Step_2@2x.svg") no-repeat;
+  }
+
+  menu li.active {
+    background: url("../images/Step_1@2x.svg") no-repeat;
+  }
+}

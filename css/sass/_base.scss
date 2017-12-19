@@ -15,8 +15,11 @@ header {
   padding: 20px 0;
 }
 
-header img {
-  padding-bottom: 20px;
+.logo {
+  background: url("../images/TrueCare24_logo.png") no-repeat;
+  width: 200px;
+  height: 44px;
+  margin: 0 auto 20px;
 }
 
 menu {
@@ -59,7 +62,6 @@ menu li:nth-child(3) {
 menu li:nth-child(4) {
   left: -15px;
 }
-
 
 main {
   background-color: #fff;
